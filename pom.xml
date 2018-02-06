@@ -30,9 +30,21 @@
 		<commons-fileupload.version>1.3.1</commons-fileupload.version>
 		<jedis.version>2.7.2</jedis.version>
 		<solrj.version>4.10.3</solrj.version>
+		<netty-all.version>4.0.25.Final</netty-all.version>
+		<rocketmq-client.version>3.2.6</rocketmq-client.version>
+		<rocketmq-common.version>3.2.6</rocketmq-common.version>
+		<rocketmq-remoting.version>3.2.6</rocketmq-remoting.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
+			
+			<!-- netty-all -->
+			<dependency>
+			    <groupId>io.netty</groupId>
+			    <artifactId>netty-all</artifactId>
+			    <version>${netty-all.version}</version>
+			</dependency>
+
 			<!-- 时间操作组件 -->
 			<dependency>
 				<groupId>joda-time</groupId>
@@ -175,6 +187,25 @@
 				<artifactId>solr-solrj</artifactId>
 				<version>${solrj.version}</version>
 			</dependency>
+			
+			
+			<!-- rockeyMQ组件 -->
+			<dependency>
+			    <groupId>com.alibaba.rocketmq</groupId>
+			    <artifactId>rocketmq-client</artifactId>
+			    <version>${rocketmq-client.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.alibaba.rocketmq</groupId>
+			    <artifactId>rocketmq-common</artifactId>
+			    <version>${rocketmq-common.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.alibaba.rocketmq</groupId>
+			    <artifactId>rocketmq-remoting</artifactId>
+			    <version>${rocketmq-remoting.version}</version>
+			</dependency>
+			
 		</dependencies>
 	</dependencyManagement>
 
