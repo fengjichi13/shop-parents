@@ -34,6 +34,7 @@
 		<rocketmq-client.version>3.2.6</rocketmq-client.version>
 		<rocketmq-common.version>3.2.6</rocketmq-common.version>
 		<rocketmq-remoting.version>3.2.6</rocketmq-remoting.version>
+		<fastjson.version>1.2.3</fastjson.version>
 	</properties>
 	<dependencyManagement>
 		<dependencies>
@@ -190,6 +191,14 @@
 			
 			
 			<!-- rockeyMQ组件 -->
+			<!-- fastjson 如果不加fastjson，会出现两个master只发到一个master的情况-->
+			<dependency>
+			    <groupId>com.alibaba</groupId>
+			    <artifactId>fastjson</artifactId>
+			    <version>${fastjson.version}</version>
+			</dependency>
+			
+			<!-- rockeyMQ -->
 			<dependency>
 			    <groupId>com.alibaba.rocketmq</groupId>
 			    <artifactId>rocketmq-client</artifactId>
